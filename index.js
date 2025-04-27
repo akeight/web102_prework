@@ -103,7 +103,7 @@ function filterUnfundedOnly() {
 
     // use filter() to get a list of games that have not yet met their goal
     const notMetGoal = GAMES_JSON.filter( (game) => {
-        return game.goal < game.pledged;
+        return game.goal > game.pledged;
     });
 
     // use the function we previously created to add the unfunded games to the DOM
@@ -116,7 +116,7 @@ function filterFundedOnly() {
 
     // use filter() to get a list of games that have met or exceeded their goal
     const funded = GAMES_JSON.filter( (game) => {
-        return game.goal >= game.pledged;
+        return game.goal <= game.pledged;
     });
 
     // use the function we previously created to add unfunded games to the DOM
@@ -150,12 +150,23 @@ allBtn.addEventListener("click", showAllGames);
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
+const unfunded = GAMES_JSON.filter( (game) => {
+    return game.goal > game.pledged;
+}).length;
 
+const funded = GAMES_JSON.filter( (game) => {
+    return game.goal <= game.pledged;
+}).length;
 
 // create a string that explains the number of unfunded games using the ternary operator
+const unfundedGamesPlural = `A total of $${totalRaised.toLocaleString('en-US')} has been raised for ${funded} games. Currently, ${unfunded} games remain unfunded. We need your help to fun these amazing games!`
+const unfundedGamesSingular = `A total of $${totalRaised.toLocaleString('en-US')} has been raised for ${funded} game. Currently, ${unfunded} game remains unfunded. We need your help to fun these amazing games!`
 
-
+const fundingString = unfunded > 1 ? unfundedGamesPlural : unfundedGamesSingular;
 // create a new DOM element containing the template string and append it to the description container
+const p = document.createElement("p");
+p.textContent = fundingString;
+descriptionContainer.appendChild(p);
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
