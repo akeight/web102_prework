@@ -188,3 +188,13 @@ firstGameContainer.appendChild(topPledgeGame);
 const runnerUpGame = document.createElement("p");
 runnerUpGame.textContent = secondGame.name;
 secondGameContainer.appendChild(runnerUpGame);
+
+// function for navigation menu
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const hamburgerMenu = document.getElementById("hamburger-menu");
+
+hamburgerBtn.addEventListener("click", () => {
+    hamburgerMenu.classList.toggle("hidden");
+    console.log("click")
+});
+

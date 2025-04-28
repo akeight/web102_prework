@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap');
 
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #2D3340;
+    width: 100%;
+    color: #B8D3D9;
 }
 
 #tentacles {
@@ -17,11 +20,79 @@ body {
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    margin-bottom: 80px;
+    width: 100%;
+    justify-content: space-evenly;
+    color: #1D2026;
+}
+
+.header-text {
+    font-family: "Press Start 2P", system-ui;
+    font-size: xx-large;
+    flex-wrap: wrap;
+}
+
+.right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#search-bar {
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#hamburger-btn {
+    color: black;
+    font-size: 27px;
+    margin: 15px 15px 15px 15px;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger-menu, a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 10px 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+
+  .hamburger-menu, a:hover {
+    text-shadow: 0 0 15px rgb(136, 146, 148);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+h2 {
+    padding: 20px 20px 20px 20px;
+    font-family: "Press Start 2P", system-ui;;
+
+}
+
+h2, p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#description-container {
+    margin: 0 30px 0 30px;
+    text-align: center;
 }
 
 .stats-container {
     display: flex;
     align-items: center;
+    margin: 0 30px 0 30px;
 }
 
 .stats-container:hover {
@@ -31,7 +102,7 @@ body {
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #1D2026;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
@@ -56,7 +127,7 @@ body {
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: #1D2026;
     padding: 1%;
     margin: 1%;
     width: 300px;
@@ -74,9 +145,15 @@ body {
 }
 
 button {
-    font-family: 'Cabin';
+    font-family: "Space Grotesk", sans-serif;
     border: none;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    background-color: #A8F294;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgb(136, 146, 148);
 }
