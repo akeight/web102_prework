@@ -9,7 +9,8 @@ body {
 }
 
 #tentacles {
-    width: 50px;
+    width: 70px;
+    margin-left: 10px;
 }
 
 .header {
@@ -28,8 +29,9 @@ body {
 
 .header-text {
     font-family: "Press Start 2P", system-ui;
-    font-size: xx-large;
+    font-size: x-large;
     flex-wrap: wrap;
+    margin: 0 0 0 20px;
 }
 
 .right {
@@ -44,6 +46,7 @@ body {
 #search-bar {
     border-radius: 5px;
     padding: 3px;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 #hamburger-btn {
@@ -51,7 +54,7 @@ body {
     font-size: 27px;
     margin: 15px 15px 15px 15px;
     border: none;
-    padding: 5px;
+    padding: 3px 10px;
 }
 
 .hamburger-menu, a {

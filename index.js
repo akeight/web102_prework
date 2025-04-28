@@ -195,6 +195,9 @@ const hamburgerMenu = document.getElementById("hamburger-menu");
 
 hamburgerBtn.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("hidden");
-    console.log("click")
 });
+
+//function for navigation links-- reused DOM selectors from "our games" btns
+
+
 
